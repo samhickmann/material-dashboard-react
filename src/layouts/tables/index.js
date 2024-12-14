@@ -26,6 +26,7 @@ import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 import Footer from "examples/Footer";
 import DataTable from "examples/Tables/DataTable";
+import DefaultDoughnutChart from "examples/Charts/DoughnutCharts/DefaultDoughnutChart";
 
 // Data
 import authorsTableData from "layouts/tables/data/authorsTableData";
@@ -90,6 +91,25 @@ function Tables() {
                   entriesPerPage={false}
                   showTotalEntries={false}
                   noEndBorder
+                />
+              </MDBox>
+            </Card>
+          </Grid>
+          <Grid item xs={6}>
+            <Card>
+              <MDBox pt={0}>
+                <DefaultDoughnutChart
+                  icon={{ color: "info", component: "leaderboard" }}
+                  title="Default Doughnut Chart"
+                  description="Affiliates program"
+                  chart={{
+                    labels: ["Creative Tim", "Github", "Bootsnipp", "Dev.to", "Codeinwp"],
+                    datasets: {
+                      label: "Projects",
+                      backgroundColors: ["info", "dark", "error", "secondary", "primary"],
+                      data: [15, 20, 12, 60, 20],
+                    },
+                  }}
                 />
               </MDBox>
             </Card>
